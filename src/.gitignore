@@ -1,0 +1,4 @@
+node_modules/
+
+# Environment variables (do NOT push secrets)
+.env
