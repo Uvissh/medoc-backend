@@ -6,12 +6,8 @@ const opdRoutes = require('./routes/opd.routes');
 const app = express();
 app.use(express.json());
 
-connectDB();
+connectDB();   // DB connect
 
 app.use('/api/opd', opdRoutes);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`OPD Engine running on port ${PORT}`);
-});
-
+module.exports = app;   // ✅ export only (NO app.listen)
