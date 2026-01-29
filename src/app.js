@@ -10,4 +10,9 @@ connectDB();   // DB connect
 
 app.use('/api/opd', opdRoutes);
 
+app.get('/', (req, res) => {
+  res.send('OPD Backend is running!');
+});
+
+
 module.exports = app;   // ✅ export only (NO app.listen)
